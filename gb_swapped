@@ -1,0 +1,51 @@
+// based on a keyboard map from an 'xkb/symbols/gb' file
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    // Describes the differences between a very simple en_US
+    // keyboard and a very simple U.K. keyboard layout defined by
+    // the SVR4 European Language Supplement and sometimes also
+    // known as the IBM 166 layout.
+
+    include "latin"
+
+    name[Group1]="English (UK, Swapped)";
+
+    key <AE02>	{ [         2,   quotedbl,  twosuperior,    oneeighth ]	};
+    key <AE03>	{ [         3,   sterling, threesuperior,    sterling ]	};
+    key <AE04>	{ [         4,     dollar,     EuroSign,   onequarter ]	};
+
+    key <AC11>	{ [apostrophe,         at, dead_circumflex, dead_caron]	};
+    key <TLDE>	{ [     grave,    notsign,          bar,          bar ]	};
+
+    key <BKSL>	{ [numbersign, asciitilde,   dead_grave,   dead_breve ]	};
+    key <LSGT>	{ [ backslash,        bar,          bar,    brokenbar ]	};
+
+    key <LWIN> {    [ Control_L     ]   };
+
+    include "level3(ralt_switch_multikey)"
+};
+
+// Copied from macintosh_vndr/gb
+partial alphanumeric_keys
+xkb_symbols "mac_swapped" {
+
+    // Describes the differences between a very simple en_US
+    // keyboard and a very simple U.K. keyboard layout
+
+    include "latin"
+
+    name[Group1]= "English (UK, Macintosh Swapped)";
+
+    key <AE02> {	[               2,              at,         EuroSign	]	};
+    key <AE03> {	[               3,        sterling,       numbersign	]	};
+    key <LSGT> {	[         section,       plusminus ]	};
+    key <TLDE> {	[           grave,      asciitilde ]	};
+
+    key <LCTL> {    [ Super_L       ]   };
+    key <LWIN> {    [ Control_L     ]   };
+
+    include "level3(ralt_switch)"
+    include "level3(enter_switch)"
+};
