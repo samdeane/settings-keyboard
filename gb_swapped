@@ -45,8 +45,8 @@ xkb_symbols "mac_swapped" {
     key <LSGT> {	[         section,       plusminus ]	};
     key <TLDE> {	[           grave,      asciitilde ]	};
 
-    key <LCTL> {    [ Super_L       ]   };
-    key <LWIN> {    [ Control_L     ]   };
+    key <RCTL> {    [ Super_L       ]   };
+    key <LWIN> {    [ Control_R     ]   };
 
-    include "level3(lalt_switch)"
+    include "level3(ralt_switch)"
 };
