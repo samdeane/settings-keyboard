@@ -1,0 +1,8 @@
+{
+    "install": [
+        ["link", "Xmodmap", "~/.Xmodmap"],
+    ],
+    "remove": [
+        ["unlink", "Xmodmap", "~/.Xmodmap"],
+    ]
+}
